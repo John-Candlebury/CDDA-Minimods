@@ -1,0 +1,22 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "war-grappling_hook",
+    "name": "War-Grappling Hook",
+    "authors": [ "Candlebury" ],
+    "maintainers": [ "Candlebury" ],
+    "description": "Transforms the normal grappling hook into a hard to use but effective weapon in the likes of a meteor hammer.",
+    "category": "content",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "id": "grapnel",
+    "copy-from": "grapnel",
+    "type": "GENERIC",
+    "name": { "str": "grappling hook" },
+    "to_hit": -3,
+    "techniques": [ "WBLOCK_1", "WIDE", "SPIN", "RAPID" ],
+    "qualities": [ [ "COOK", 1 ], [ "ROPE", 2 ] ],
+    "flags": [ "REACH_ATTACK", "REACH3", "DURABLE_MELEE", "NONCONDUCTIVE" ]
+  }
+]

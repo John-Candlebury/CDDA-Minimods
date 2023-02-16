@@ -1,0 +1,1 @@
+Transforms the normal grappling hook into a hard to use but effective weapon in the likes of a meteor hammer.
