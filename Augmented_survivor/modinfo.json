@@ -1,0 +1,31 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "minimod_augmented_survivor",
+    "name": "Minimod: Augmented Survivor",
+    "authors": [ "John-Candlebury" ],
+    "maintainers": [ "John-Candlebury" ],
+    "description": "Adds a survivor profession starting with several stat-boosting bionics",
+    "category": "content",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "profession",
+    "id": "mm_augmented_survivor",
+    "copy-from": "unemployed",
+    "name": "Augmented Survivor",
+    "description": "Extensive bionic augmentation has allowed to perdure when most would've faltered.",
+    "points": 8,
+    "CBMs": [
+      "bio_metabolics",
+      "bio_ears",
+      "bio_str_enhancer",
+      "bio_int_enhancer",
+      "bio_memory",
+      "bio_dex_enhancer",
+      "bio_eye_enhancer",
+      "bio_power_storage_mkII",
+      "bio_power_storage_mkII"
+    ]
+  }
+]
