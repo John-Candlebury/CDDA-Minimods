@@ -1,0 +1,49 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "minimod_wandering_castle",
+    "name": "Minimod: Wandering castle",
+    "authors": [ "John-Candlebury" ],
+    "maintainers": [ "John-Candlebury" ],
+    "description": "Adds a starting scenario guaranteeing rapid access to the Exodii fortress castle.",
+    "category": "content",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "scenario",
+    "id": "wandering_castle",
+    "name": "Wandering castle",
+    "points": 2,
+    "description": "Your subsistence hunting trip was fatefully derailed when stone and scrap castle tear itself into existence.  With your track completely gone, you might as well explore the place.",
+    "start_name": "Wilderness",
+    "allowed_locs": [ "sloc_forest" ],
+    "missions": [ "MISSION_WANDERING_CASTLE" ],
+    "professions": [ "naturalist", "shotgun_hunter", "rifle_hunter", "bow_hunter", "crossbow_hunter", "unemployed", "mm_unfortunate_hunter" ],
+    "flags": [ "LONE_START" ]
+  },
+  {
+    "id": "MISSION_WANDERING_CASTLE",
+    "type": "mission_definition",
+    "name": { "str": "Investigate the strange fortress." },
+    "description": "You saw a strange castle tear itself into existence during a hunting trip.  Exploring it might prove worthwhile.",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "destination": "exodii_base_x0y3z0",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "exodii_base_x0y3z0", "om_special": "exodii_base", "reveal_radius": 5, "search_range": 30 }
+    },
+    "origins": [ "ORIGIN_GAME_START" ]
+  },
+  {
+    "type": "profession",
+    "id": "mm_unfortunate_hunter",
+    "copy-from": "birder",
+    "name": "Unfortunate Hunter",
+    "description": "An early and unfortunate encounter with portal-storm flora claimed most of your hunting equipment and has left you severely weakened.",
+    "points": -1,
+    "traits": [
+      "VOMITOUS"
+    ]
+  }
+]
