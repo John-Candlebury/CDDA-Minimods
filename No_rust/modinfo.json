@@ -46,6 +46,8 @@
     "name": { "str": "no skill rust" },
     "points": 0,
     "player_display": false,
+    "//": "We double dip, but maybe there's no need to?",
+    "skill_rust_multiplier": 0,
     "enchantments": [
         {
           "condition": "ALLWAYS",
