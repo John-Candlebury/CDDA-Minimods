@@ -1,0 +1,59 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "minimod_no_rust",
+    "name": "Minimod: No Skill Rust",
+    "authors": [ "John-Candlebury" ],
+    "maintainers": [ "John-Candlebury" ],
+    "description": "Disables Skill Rust.",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_REMOVE_SKILL_RUST_ON_START",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "condition": { "not": { "u_has_trait": "NO_SKILL_RUST_TRAIT" } },
+    "effect": [
+      { "u_add_trait": "NO_SKILL_RUST_TRAIT"}
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_REMOVE_SKILL_RUST_ON_LOAD",
+    "eoc_type": "EVENT",
+    "required_event": "game_load",
+    "condition": { "not": { "u_has_trait": "NO_SKILL_RUST_TRAIT" } },
+    "effect": [
+      { "u_add_trait": "NO_SKILL_RUST_TRAIT"}
+    ]
+  },
+  {
+    "//": "This one is for NPC followers.  There might be a better alternative.",
+    "type": "effect_on_condition",
+    "id": "EOC_REMOVE_SKILL_RUST_ON_KILL",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_monster",
+    "condition": { "not": { "u_has_trait": "NO_SKILL_RUST_TRAIT" } },
+    "effect": [
+      { "u_add_trait": "NO_SKILL_RUST_TRAIT"}
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "NO_SKILL_RUST_TRAIT",
+    "name": { "str": "no skill rust" },
+    "points": 0,
+    "player_display": false,
+    "enchantments": [
+        {
+          "condition": "ALLWAYS",
+          "values": [
+            { "value": "SKILL_RUST_RESIST", "add": 100000 }
+          ]
+        }
+    ],
+    "description": "Disables skill rust."
+  }
+]
