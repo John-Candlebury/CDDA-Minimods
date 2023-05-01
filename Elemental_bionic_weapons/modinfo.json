@@ -147,5 +147,16 @@
     "id": "BIONIC_WEAPON_MELEE",
     "type": "json_flag",
     "//": "This bionic weapon is meant to be used in melee."
+  },
+  {
+    "id": "bionics_mil",
+    "type": "item_group",
+    "copy-from": "bionics_mil",
+    "extend": {
+      "items": [
+        [ "afs_bio_blade_fire", 16 ],
+        [ "afs_bio_blade_electric", 16 ]
+      ]
+    }
   }
 ]
