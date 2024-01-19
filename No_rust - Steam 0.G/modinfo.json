@@ -1,0 +1,30 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "minimod_no_rust",
+    "name": "0.G. No Skill Rust",
+    "steam_id": 3142744628,
+    "authors": [ "John-Candlebury" ],
+    "maintainers": [ "John-Candlebury" ],
+    "description": "Disables Skill Rust.",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_REMOVE_SKILL_RUST_ON_START",
+    "recurrence": "20 minutes",
+    "condition": { "not": { "u_has_trait": "NO_SKILL_RUST_TRAIT" } },
+    "effect": [ { "u_add_trait": "NO_SKILL_RUST_TRAIT" } ]
+  },
+  {
+    "type": "mutation",
+    "id": "NO_SKILL_RUST_TRAIT",
+    "name": { "str": "no skill rust" },
+    "points": 0,
+    "//": "We double dip, but maybe there's no need to?",
+    "skill_rust_multiplier": 0,
+    "enchantments": [ { "condition": "ALLWAYS", "values": [ { "value": "SKILL_RUST_RESIST", "add": 100000 } ] } ],
+    "description": "Disables skill rust."
+  }
+]
