@@ -1,0 +1,20 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "minimod_no_portal_storms",
+    "name": "0.G. No Portal Storms",
+    "authors": [ "Candlebury" ],
+    "maintainer": [ "Candlebury" ],
+    "description": "Disables Portal Storms.  Some vanilla missions and other mod content might become inaccesible.",
+    "steam_id": 3142744628,
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PORTAL_STORM_WARN_OR_CAUSE_RECURRING",
+    "recurrence": [ "10 days", "11 days" ],
+    "global": true,
+    "effect": [  ]
+  }
+]
