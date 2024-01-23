@@ -6,7 +6,7 @@
     "authors": [ "Candlebury" ],
     "maintainer": [ "Candlebury" ],
     "description": "Disables Portal Storms.  Some vanilla missions and other mod content might become inaccesible.",
-    "steam_id": 3142744628,
+    "steam_id": 3145472516,
     "category": "rebalance",
     "dependencies": [ "dda" ]
   },
