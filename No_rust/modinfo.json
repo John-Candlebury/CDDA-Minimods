@@ -15,9 +15,7 @@
     "eoc_type": "EVENT",
     "required_event": "game_start",
     "condition": { "not": { "u_has_trait": "NO_SKILL_RUST_TRAIT" } },
-    "effect": [
-      { "u_add_trait": "NO_SKILL_RUST_TRAIT"}
-    ]
+    "effect": [ { "u_add_trait": "NO_SKILL_RUST_TRAIT" } ]
   },
   {
     "type": "effect_on_condition",
@@ -25,9 +23,7 @@
     "eoc_type": "EVENT",
     "required_event": "game_load",
     "condition": { "not": { "u_has_trait": "NO_SKILL_RUST_TRAIT" } },
-    "effect": [
-      { "u_add_trait": "NO_SKILL_RUST_TRAIT"}
-    ]
+    "effect": [ { "u_add_trait": "NO_SKILL_RUST_TRAIT" } ]
   },
   {
     "//": "This one is for NPC followers.  There might be a better alternative.",
@@ -36,9 +32,7 @@
     "eoc_type": "EVENT",
     "required_event": "character_kills_monster",
     "condition": { "not": { "u_has_trait": "NO_SKILL_RUST_TRAIT" } },
-    "effect": [
-      { "u_add_trait": "NO_SKILL_RUST_TRAIT"}
-    ]
+    "effect": [ { "u_add_trait": "NO_SKILL_RUST_TRAIT" } ]
   },
   {
     "type": "mutation",
@@ -46,15 +40,11 @@
     "name": { "str": "no skill rust" },
     "points": 0,
     "player_display": false,
-    "//": "We double dip, but maybe there's no need to?",
-    "skill_rust_multiplier": 0,
     "enchantments": [
-        {
-          "condition": "ALLWAYS",
-          "values": [
-            { "value": "SKILL_RUST_RESIST", "add": 100000 }
-          ]
-        }
+      {
+        "condition": "ALLWAYS",
+        "values": [ { "value": "SKILL_RUST_RESIST", "multiply": -1.0 }, { "value": "SKILL_RUST_RESIST", "add": 10000 } ]
+      }
     ],
     "description": "Disables skill rust."
   }
