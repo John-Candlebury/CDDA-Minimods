@@ -1,0 +1,17 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "minimod_no_zobmie_revival",
+    "name": "Minimod: No Zombie Revival",
+    "authors": [ "John-Candlebury" ],
+    "maintainers": [ "John-Candlebury" ],
+    "description": "Disables zombie revival.  Other monsters (EX: Robots) might still self reassemble after death.",
+    "category": "rebalance",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "type": "monster_adjustment",
+    "species": "ZOMBIE",
+    "flag": { "name": "REVIVES", "value": false }
+  }
+]
