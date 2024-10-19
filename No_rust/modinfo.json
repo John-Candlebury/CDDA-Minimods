@@ -43,7 +43,7 @@
     "enchantments": [
       {
         "condition": "ALLWAYS",
-        "values": [ { "value": "SKILL_RUST_RESIST", "multiply": -1.0 }, { "value": "SKILL_RUST_RESIST", "add": 10000 } ]
+        "values": [ { "value": "SKILL_RUST_RESIST", "multiply": -100.0 }, { "value": "SKILL_RUST_RESIST", "add": 10000 } ]
       }
     ],
     "description": "Disables skill rust."
