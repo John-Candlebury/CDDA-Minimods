@@ -42,7 +42,7 @@
     "player_display": false,
     "enchantments": [
       {
-        "condition": "ALLWAYS",
+        "condition": "ALWAYS",
         "values": [ { "value": "SKILL_RUST_RESIST", "multiply": -100.0 }, { "value": "SKILL_RUST_RESIST", "add": 10000 } ]
       }
     ],
