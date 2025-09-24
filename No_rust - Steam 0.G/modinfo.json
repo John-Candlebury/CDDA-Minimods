@@ -24,7 +24,7 @@
     "points": 0,
     "//": "We double dip, but maybe there's no need to?",
     "skill_rust_multiplier": 0,
-    "enchantments": [ { "condition": "ALLWAYS", "values": [ { "value": "SKILL_RUST_RESIST", "add": 100000 } ] } ],
+    "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "SKILL_RUST_RESIST", "add": 100000 } ] } ],
     "description": "Disables skill rust."
   }
 ]

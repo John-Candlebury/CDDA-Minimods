@@ -26,12 +26,13 @@
     "effect": [ { "u_add_trait": "NO_SKILL_RUST_TRAIT" } ]
   },
   {
-    "//": "This one is for NPC followers.  There might be a better alternative.",
+    "//": "This one is for NPC followers.",
     "type": "effect_on_condition",
     "id": "EOC_REMOVE_SKILL_RUST_ON_KILL",
-    "eoc_type": "EVENT",
-    "required_event": "character_kills_monster",
+    "eoc_type": "RECURRING",
+    "recurrence": 900,
     "condition": { "not": { "u_has_trait": "NO_SKILL_RUST_TRAIT" } },
+    "deactivate_condition": { "u_has_trait": "NO_SKILL_RUST_TRAIT" },
     "effect": [ { "u_add_trait": "NO_SKILL_RUST_TRAIT" } ]
   },
   {
@@ -40,6 +41,7 @@
     "name": { "str": "no skill rust" },
     "points": 0,
     "player_display": false,
+    "purifiable": false,
     "enchantments": [
       {
         "condition": "ALWAYS",
